@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="APP">
+<head>
+  <meta charset="UTF-8">
+  <title>file upload</title>
+</head>
+
+<body>
+  <div>
+    <h1>Upload files with fetch API</h1>
+    <form id="my-form" method='post' action='upload' enctype="multipart/form-data">
+      <input id="inpFile" type='file' name='fileUploaded'>
+      <button id="submit-btn" type='submit'>Upload File</button>
+    </form>
+  </div>
+  <div>
+    <h2>All Files</h2>
+    <div id="file-name-container"></div>
+  </div>
+  <script src="upload.js"></script>
+</body>
+</html>
