@@ -37,7 +37,7 @@ router.route("/uploads").post((req, res, next) => {
     console.log("Uploading: " + filename);
 
     let tempfilename = filename;
-    let extension = tempfilename.split(".").at(-1).toLowerCase();
+    let extension = tempfilename.split(".").slice(-1)[0].toLowerCase();
     console.log(extension);
     if (extension === "glb" || extension === "gltf" || extension === "fbx") {
       let newNameId = {
