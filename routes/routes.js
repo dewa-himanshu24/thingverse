@@ -6,14 +6,16 @@ const router = express.Router();
 const fs = require("fs-extra");
 const path = require("path"); //File System - for file manipulation
 
+require('dotenv').config()
+
 const s3 = new AWS.S3({ apiVersion: "2006-03-01" });
 
 // create connection to database
-const url =
-  "mongodb+srv://Himanshu-Dewangan:DewaATLAS24@work-assignments.j58q8gb.mongodb.net/Fabrix-assignment?retryWrites=true&w=majority";
+// const url =
+//   "mongodb+srv://Himanshu-Dewangan:DewaATLAS24@work-assignments.j58q8gb.mongodb.net/Fabrix-assignment?retryWrites=true&w=majority";
 
 mongoose
-  .connect(url, {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
