@@ -7,7 +7,7 @@ const fileNameContainer = document.getElementById("file-name-container");
 myForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const endpoint = "http://localhost:3000/api/v1/3dmodels/uploads";
+  const endpoint = window.location.origin + "/api/v1/3dmodels/uploads";
   const formData = new FormData();
   console.log(formData);
   formData.append(inpFile.files[0].name, inpFile.files[0]);
@@ -35,7 +35,7 @@ function renderFileNames(fileNames) {
   let htmlStr = "";
   for (let i = 0; i < fileNames.length; i++) {
     htmlStr +=
-      '<div><a href="http://localhost:3000/view-model.html?model-name=' +
+      '<div><a href="/view-model.html?model-name=' +
       fileNames[i] +
       '">' +
       fileNames[i] +
@@ -47,7 +47,7 @@ function renderFileNames(fileNames) {
 
 async function getAllFilesName() {
   const response = await fetch(
-    "http://localhost:3000/api/v1/3dmodels/file-name",
+    window.location.origin + "/api/v1/3dmodels/file-name",
     {
       method: "GET",
       headers: {
