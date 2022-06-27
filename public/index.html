@@ -2,21 +2,102 @@
 <html lang="en" ng-app="APP">
 <head>
   <meta charset="UTF-8">
-  <title>file upload</title>
+  <title>ThingVerse</title>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-  <div>
-    <h1>Upload files with fetch API</h1>
-    <form id="my-form" method='post' action='upload' enctype="multipart/form-data">
+  <div class="container">
+
+    <div class="title">
+      <h1>ThingVerse</h1>
+    </div>
+
+    <form class="upload-section" id="my-form" method='post' action='upload' enctype="multipart/form-data">
       <input id="inpFile" type='file' name='fileUploaded'>
       <button id="submit-btn" type='submit'>Upload File</button>
     </form>
+
+    <div class="added-files-section">
+      <h2>3D Models</h2>
+      <div id="file-name-container"></div>
+    </div>
   </div>
-  <div>
-    <h2>All Files</h2>
-    <div id="file-name-container"></div>
-  </div>
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <h3>About<span>ThingVerse</span></h3>
+
+      <p class="footer-company-name">© 2022 Himanshu Dewangan 3D file upload project</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>
+          Durg - 491001
+        </p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 7987434725</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="https://dewa.himanshu24@gmail.com">dewa.himanshu24</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About This Project</span>
+        For this project I have worked on Node.js, Express framework, Three js library, used AWS and MongoDb for storing database.
+        </p>
+      <div class="footer-icons">
+        <a href="https://www.twitter.com/Himansh54308380"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/himanshu-dewangan-45a60a22a/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/dewa-himanshu24"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>    <footer class="footer-distributed">
+
+    <div class="footer-left">
+      <h3>About<span>ThingVerse</span></h3>
+
+      <p class="footer-company-name">© 2022 Himanshu Dewangan 3D file upload project</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>
+          Durg - 491001
+        </p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+91 7987434725</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="https://dewa.himanshu24@gmail.com">dewa.himanshu24</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>About This Project</span>
+        For this project I have worked on Node.js, Express framework, Three js library, AWS and MongoDb for storing database.
+        </p>
+      <div class="footer-icons">
+        <a href="https://www.twitter.com/Himansh54308380"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/himanshu-dewangan-45a60a22a/"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/dewa-himanshu24"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
   <script src="index.js"></script>
 </body>
 </html>
